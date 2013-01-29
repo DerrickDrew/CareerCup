@@ -10,7 +10,7 @@
 /*
  * Just for fun.
  * Algorithm_1: There are two cycles and everytime pick one element of string to compare with the rest chacteristics of the string.
- *
+ * Algorithm_2: First of all, sort the string; then compare every element with any elements before or behind it
  *
  *
  */
@@ -34,6 +34,16 @@ bool Algorithm_1(string str)
         }
     }
     return true;
+}
+
+/*
+ * O(n^2)
+ */
+
+bool Algorithm_2(string str)
+{
+
+
 }
 
 int main()
