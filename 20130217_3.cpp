@@ -41,13 +41,14 @@ bool Decide_Permutation(string str1, string str2)
 
     int map_str1[128];
     int map_str2[128];
+    int strLen = 0;
     memset(map_str1, 0, sizeof(map_str1));
     memset(map_str2, 0, sizeof(map_str2));
 
-    for(int i = 0; i < str1.size(); i++)
+    for(int i = 0, strLen = str1.size(); i < strLen; i++)
     map_str1[str1[i]]++;
 
-    for(int i = 0; i < str2.size(); i++)
+    for(int i = 0, strLen = str2.size(); i < strLen; i++)
     map_str2[str2[i]]++;
 
     for(int i = 0; i < 128; i++)
