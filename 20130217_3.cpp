@@ -38,6 +38,8 @@ using namespace std;
 
 bool Decide_Permutation(string str1, string str2)
 {
+    if(str1.size() != str2.size())
+    return false;
 
     int map_str1[128];
     int map_str2[128];
