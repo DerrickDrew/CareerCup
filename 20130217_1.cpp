@@ -52,7 +52,7 @@ bool Algorithm_1(string str)
 bool Algorithm_2(string str)
 {
     if(str.size() == 0)
-		return true;
+    return true;
 
     int tmp_str_size = str.size();
     char ch[tmp_str_size];
@@ -60,7 +60,7 @@ bool Algorithm_2(string str)
     for(int i = 0; i < tmp_str_size; i++)  // transform string into char*
     ch[i] = str[i];
 
-    sort(ch, ch + tmp_str_size);           // nlog(n) 
+    sort(ch, ch + tmp_str_size);           // nlog(n)
 
     for(int i = 0; i < tmp_str_size - 1; i++)  // compare compare every element with any elements before or behind it
     {
