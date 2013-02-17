@@ -36,9 +36,10 @@ using namespace std;
 
 bool Algorithm_1(string str)
 {
-    for(int i = 0; i < str.length(); i++)
+    int len = str.length()
+    for(int i = 0; i < len; i++)
     {
-        for(int j = i + 1; j < str.length(); j++)
+        for(int j = i + 1; j < len; j++)
         {
             if(str[i] == str[j])
             return false;
