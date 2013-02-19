@@ -32,24 +32,10 @@
 #include<string>
 using namespace std;
 
-string change_int_to_string(int count)
-{
-    string tmp1 = "", tmp2 = "";
-    while(count)
-    {
-        tmp1 += count % 10 + '0';
-        count /= 10;
-    }
-    for(int i = tmp1.size() - 1; i >= 0; i--)
-    {
-        tmp2 += tmp1[i];
-    }
-    return tmp2;
-}
-
 string compressed_string(string ori_str)
 {
     string new_str = "";
+    char buf[13];
     char pre_char = ori_str[0];
     int count = 1;
     int j = 0;
@@ -62,14 +48,16 @@ string compressed_string(string ori_str)
         else
         {
             new_str += pre_char;
-            new_str += change_int_to_string(count);
+            sprintf(buf, "%d", count);// suggestion from moophis
+            new_str += buf;
             j += 2;
             count = 1;
             pre_char = ori_str[i];
         }
     }
     new_str += pre_char;
-    new_str += change_int_to_string(count);
+    sprintf(buf, "%d", count);// suggestion from moophis
+    new_str += buf;
     j += 2;
     if(j >= ori_str.size())
     {
